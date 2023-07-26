@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Remote Mouse</string>
+    <string name="service_status">Service Status</string>
+    <string name="access_permission">Accessibility Permission:</string>
+    <string name="overlay_Permission">Overlay Permission:</string>
+    <string name="access_Service">Accessibility Service:</string>
+    <string name="overlay_Service">Overlay Service:</string>
+    <string name="setup_Permissions">SETUP PERMISSIONS</string>
+    <string name="perm_acc_allowed">Accessibility Permissions : <font color='#FF00C853'>Granted</font></string>
+    <string name="perm_acc_denied">Accessibility Permissions : <font color='#FFD50000'>Not Granted</font></string>
+    <string name="perm_overlay_allowed">Overlay Permissions : <font color='#FF00C853'>Granted</font></string>
+    <string name="perm_overlay_denied">Overlay Permissions : <font color='#FFD50000'>Not Granted</font></string>
+    <string name="serv_acc_allowed">Accessibility Service : <font color='#FF00C853'>Running</font></string>
+    <string name="serv_acc_denied">Accessibility Service : <font color='#FFD50000'>Not Running</font></string>
+    <string name="serv_overlay_allowed">Overlay Service : <font color='#FF00C853'>Running</font></string>
+    <string name="serv_overlay_denied">Overlay Service : <font color='#FFD50000'>Not Running</font></string>
+    <string name="accessibility_service_description">Control mouse cursor on your project using your remote control</string>
+    <string name="KeyDetection_Help_BossKey">Press and Hold a key for 3 seconds then release it to set as Boss Key\n\nBoss key allows you to Enable/Disable Mouse Service as well as Toggle b/w Scroll and D-Pad Mode.\nIf the popup does not appear then that key is incompatible.</string>
+    <string-array name="mouse_style_arr">
+        <item>Dark (default)</item>
+        <item>Light</item>
+    </string-array>
+    <string name="Key_Pressed">Key Pressed</string>
+    <string name="Setup_Permissions">SETUP PERMISSIONS for Remote Mouse</string>
+    <string name="Boss_Key">Boss Key:</string>
+    <string name="Boss_Key2">Boss Key in NetFlix:</string>
+    <string name="Default_Key">(Default: 164   MUTE_BUTTON)</string>
+    <string name="DETECT">DETECT </string>
+    <string name="ScrollMode_E">Scroll Mode: Enabled </string>
+    <string name="ScrollMode_D">Scroll Mode: Disabled </string>
+    <string name="Mouse_Mode">Mouse Mode</string>
+    <string name="Scroll_Mode">Scroll Mode</string>
+    <string name="Dpad_Mode">Remote Mode</string>
+    <string name="Confirm1">Confirm your changes</string>
+    <string name="Confirm2">Do you really want to set Key</string>
+    <string name="Confirm3"> as new Boss Key??</string>
+    <string name="Confirm4">New Boss key is : </string>
+
+
+</resources>

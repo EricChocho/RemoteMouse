@@ -1,0 +1,73 @@
+package com.viewsonic.remotemouse.view;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PointF;
+import android.graphics.drawable.BitmapDrawable;
+import android.view.View;
+
+import androidx.core.content.ContextCompat;
+
+import com.viewsonic.remotemouse.R;
+import com.viewsonic.remotemouse.gui.IconStyleSpinnerAdapter;
+import com.viewsonic.remotemouse.helper.Helper;
+
+public class MouseCursorView extends View {
+    private static final int DEFAULT_ALPHA= 255;
+
+    private final PointF mPointerLocation;
+    private final Paint mPaintBox;
+    private Bitmap mPointerBitmap;
+    private int pointerDrawableReference;
+    private int pointerSizeReference;
+
+    private int pointerOffsetX;
+    private int pointerOffsetY;
+
+    public MouseCursorView(Context context) {
+        super(context);
+        setWillNotDraw(false);
+        mPointerLocation = new PointF();
+        mPaintBox = new Paint();
+        updateFromPreferences();
+        setBitmap(context);
+    }
+
+    private void setBitmap(Context context) {
+        BitmapDrawable bp = (BitmapDrawable) ContextCompat.getDrawable(context, pointerDrawableReference);
+        Bitmap originalBitmap = bp.getBitmap();
+        BitmapDrawable d = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(originalBitmap, 50 * pointerSizeReference, 50 * pointerSizeReference, true));
+        mPointerBitmap = d.getBitmap();
+    }
+
+    public void updateFromPreferences() {
+        Context ctx = getContext();
+        String iconStr = Helper.getMouseIconPref(ctx);
+        //pointerDrawableReference = IconStyleSpinnerAdapter.textToResourceIdMap.getOrDefault(iconStr, R.drawable.pointer);
+        //pointerOffsetX = IconStyleSpinnerAdapter.textToOffsetX.getOrDefault(iconStr, 0);
+        //pointerOffsetY = IconStyleSpinnerAdapter.textToOffsetY.getOrDefault(iconStr, 0);
+
+        pointerDrawableReference = IconStyleSpinnerAdapter.textToResourceIdMap.getOrDefault(iconStr, R.drawable.pointer_light);
+        pointerOffsetX = IconStyleSpinnerAdapter.textToOffsetX.getOrDefault(iconStr, 8);
+        pointerOffsetY = IconStyleSpinnerAdapter.textToOffsetY.getOrDefault(iconStr, 6);
+
+        //pointerSizeReference = Helper.getMouseSizePref(ctx) + 1;
+        pointerSizeReference = 1;
+        setBitmap(getContext());
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        mPaintBox.setAlpha(DEFAULT_ALPHA);
+        canvas.drawBitmap(mPointerBitmap, mPointerLocation.x - 50 * pointerSizeReference * pointerOffsetX / 209, mPointerLocation.y - 50 * pointerSizeReference * pointerOffsetY / 209, mPaintBox);
+    }
+
+    public void updatePosition(PointF p) {
+        mPointerLocation.x = p.x;
+        mPointerLocation.y = p.y;
+        this.postInvalidate();
+    }
+}

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Remote Mouse</string>
+    <string name="service_status">权限状态</string>
+    <string name="access_permission">"协助工具" 权限 :</string>
+    <string name="overlay_Permission">"显示于上方" 权限 :</string>
+    <string name="access_Service">"协助工具" 服务 :</string>
+    <string name="overlay_Service">"显示于上方" 服务 :</string>
+    <string name="setup_Permissions">设定权限</string>
+    <string name="perm_acc_allowed">"协助工具" 权限 :<font color='#FF00C853'>获得</font></string>
+    <string name="perm_acc_denied">"协助工具" 权限 :<font color='#FFD50000'>未获得</font></string>
+    <string name="perm_overlay_allowed">"显示于上方" 权限 :<font color='#FF00C853'>获得</font></string>
+    <string name="perm_overlay_denied">"显示于上方" 权限 :<font color='#FFD50000'>未获得</font></string>
+    <string name="serv_acc_allowed">"协助工具" 服务 :<font color='#FF00C853'>执行中</font></string>
+    <string name="serv_acc_denied">"协助工具" 服务 :<font color='#FFD50000'>未执行</font></string>
+    <string name="serv_overlay_allowed">""显示于上方" 服务 :<font color='#FF00C853'>执行中</font></string>
+    <string name="serv_overlay_denied">"显示于上方" 服务 :<font color='#FFD50000'>未执行</font></string>
+    <string name="accessibility_service_description">在投影机上使用遥控器控制滑鼠</string>
+    <string name="KeyDetection_Help_BossKey">按住你要设为快捷键的遥控器按钮3秒\n\n快捷键 可用来在 滑鼠/卷动 模式, 及滑鼠/方向键模式间切换.</string>
+    <string-array name="mouse_style_arr">
+        <item>Dark (default)</item>
+        <item>Light</item>
+    </string-array>
+    <string name="Key_Pressed">按到的按键</string>
+    <string name="Setup_Permissions">开启 Remote Mouse 权限</string>
+    <string name="Boss_Key">快捷键:</string>
+    <string name="Boss_Key2">NetFlix 中的快捷键:</string>
+    <string name="Default_Key">(预设: 164:静音键)</string>
+    <string name="DETECT">设定快捷键</string>
+    <string name="ScrollMode_E">卷动模式: 开启</string>
+    <string name="ScrollMode_D">卷动模式: 关闭</string>
+    <string name="Mouse_Mode">滑鼠模式</string>
+    <string name="Scroll_Mode">卷动模式</string>
+    <string name="Dpad_Mode">方向键模式</string>
+    <string name="Confirm1">确认你的设定</string>
+    <string name="Confirm2">你确定要设定键</string>
+    <string name="Confirm3"> 作为快捷键吗??</string>
+    <string name="Confirm4">新快捷键是 : </string>
+</resources>
